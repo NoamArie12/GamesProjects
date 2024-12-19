@@ -1,0 +1,498 @@
+:root{
+    /*Body*/
+    --BodyBackgroundOneColor--: white;
+    --BodyBackgroundTwoColor--: #bebebe;
+    /*SideBar*/
+    --SidebarBackgroundColor--: #e4e4e4;
+    --SidebarShadowColor--: #0000001a;
+    --SidebarMenuColor--: black;
+    --SidebarCategoriesColor--: #8f8f8f;
+    --SidebarOptionsColor--: #333;
+    --SidebarOptionsHoverBackgroundColor--: #ddd;
+    /*h1*/
+    --h1Color--: black;
+    /*Button*/
+    --ButtonBackgroundColor--: #444;
+    --ButtonColor--: white;
+    --ButtonHoverColor--: #666;
+    --ButtonActiveColor--: #555555;
+    /*Input*/
+    --InputBackgroundColor--: #e0e0e0;
+    --InputColor--: #333;
+    --InputPlaceholderColor--: #555555;
+    /*About*/
+    --AboutColor--: black;
+    /*GameContainer*/
+    --GameContainerBackgroundColor--: #444;
+    --GameContainerShadowColor--: #00000080;
+    --GameNameColor--: #c9c7c7;
+}
+.DarkTheme{
+    /*Body*/
+    --BodyBackgroundOneColor--: #424242;
+    --BodyBackgroundTwoColor--: #292929;
+    /*SideBar*/
+    --SidebarBackgroundColor--: #646464;
+    --SidebarShadowColor--: #0000001a;
+    --SidebarMenuColor--: #e1e1e1;
+    --SidebarCategoriesColor--: #e0e0e0;
+    --SidebarOptionsColor--: #111111;
+    --SidebarOptionsHoverBackgroundColor--: #7d7d7d80;
+    /*h1*/
+    --h1Color--: white;
+    /*Button*/
+    --ButtonBackgroundColor--: #505050;
+    --ButtonColor--: #e0e0e0;
+    --ButtonHoverColor--: #555555;
+    --ButtonActiveColor--: #666;
+    /*Input*/
+    --InputBackgroundColor--: #6d6d6d;
+    --InputColor--: #e0e0e0;
+    --InputPlaceholderColor--: #e0e0e0a0;
+    /*About*/
+    --AboutColor--: #e0e0e0;
+    /*GameContainer*/
+    --GameContainerBackgroundColor--: #454545;
+    --GameContainerShadowColor--: #00000080;
+    --GameNameColor--: #c9c7c7;
+}
+
+@media only screen and (min-width: 788px) {
+    body,html{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, var(--BodyBackgroundOneColor--), var(--BodyBackgroundTwoColor--));
+    }
+    #space{
+        height: 100px;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .top-bar .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .top-bar .menu a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 8px 12px;
+    }
+    .top-bar .menu a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .main-container {
+        display: flex;
+        margin-top: 60px;
+    }
+    .logo:hover{
+        cursor: pointer;
+    }
+    #startOfTheUpBar{
+        margin-left: 125px;
+    }
+    #EndOfTheUpBar{
+        margin-right: 750px;
+    }
+    .logo:hover{
+        cursor: pointer;
+    }
+    #ChangeThemMode{
+        background-color: #5a5a5a5f;
+        padding: 5px;
+        border-radius: 50px;
+    }
+    #LightThem:hover, #DarkThem:hover{
+        cursor: pointer;
+        transform: scale(1.025);
+    }
+    #LightThem:active, #DarkThem:active{
+        color: #939393;
+    }
+
+    /* Side Bar */
+    .sidebar {
+        width: 200px;
+        background-color: var(--SidebarBackgroundColor--);
+        height: 100vh;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        box-shadow: 2px 0 5px var(--SidebarShadowColor--);
+        transition: width 0.3s ease;
+        border-top-right-radius: 5px;
+    }
+    #showMoreCategory{
+        margin-left: 25px;
+        text-align: left;
+        margin-top: 15px;
+        color: var(--SidebarOptionsColor--);
+    }
+    #showMoreCategory:hover{
+        transform: scale(1.025);
+        cursor: pointer;
+    }
+    .sidebar a {
+        display: block;
+        color: var(--SidebarOptionsColor--);
+        text-decoration: none;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    .sidebar a:hover {
+        background-color: var(--SidebarOptionsHoverBackgroundColor--);
+    }
+    .sidebar.collapsed {
+        width: 60px;
+    }
+    .collapsed-content {
+        display: none;
+    }
+    .sidebar.collapsed .expanded-content {
+        display: none;
+    }
+    .sidebar.collapsed .collapsed-content {
+        display: block;
+        text-align: center;
+    }
+    .sideBarCategories{
+        width: 150px;
+        color: var(--SidebarCategoriesColor--);
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .cSideBarCategories{
+        width: 30px;
+        color: var(--SidebarCategoriesColor--);
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    /* content */
+    .content {
+        margin-left: 220px;
+        padding: 20px;
+        flex: 1;
+    }
+    body{
+        text-align: center;
+    }
+    h1{
+        margin-top: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: var(--h1Color--);
+    }
+    button {
+        width: 50px;
+        height: 40px;
+        background-color: var(--ButtonBackgroundColor--); 
+        color: var(--ButtonColor--);
+        border: none;
+        border-radius: 15px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: var(--ButtonHoverColor--);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    button:active{
+        background-color: var(--ButtonActiveColor--);
+    }
+
+    input {
+        width: 500px;
+        height: 20px;
+        background-color: var(--InputBackgroundColor--);
+        border-radius: 15px;
+        border: none;
+        padding: 10px;
+        color: var(--InputColor--);
+    }
+    input::placeholder {
+        color: var(--InputPlaceholderColor--);
+    }
+
+    input:hover{
+        transform: scale(1.05);
+    }
+    
+    #about{
+        color: var(--AboutColor--);
+        font-family: sans-serif;
+    }
+    .agamge{
+        margin-top: 115px;
+        background-color: var(--GameContainerBackgroundColor--);
+        height: 250px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px var(--GameContainerShadowColor--);
+    }
+    .agamge:hover{
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    .row {
+        gap: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        margin-top: 10px
+    }
+    .img-name{
+        font-weight: bold;
+        margin-top: 20px;
+        font-size: 25px;
+        font-family: arial;
+        color: var(--GameNameColor--);
+    }
+    .img-game{
+        border-radius: 12px;
+        box-shadow: 0 10px 20px 1px var(--GameContainerShadowColor--);
+    }
+    
+}
+
+@media only screen and (max-width: 787px) {
+    body,html{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, var(--BodyBackgroundOneColor--), var(--BodyBackgroundTwoColor--));
+    }
+    #space{
+        height: 100px;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .top-bar .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .top-bar .menu a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 8px 12px;
+    }
+    .top-bar .menu a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .main-container {
+        display: flex;
+        margin-top: 60px;
+    }
+    .logo:hover{
+        cursor: pointer;
+    }
+    #startOfTheUpBar{
+        margin-left: 125px;
+    }
+    #EndOfTheUpBar{
+        margin-right: 750px;
+    }
+    .logo:hover{
+        cursor: pointer;
+    }
+    #ChangeThemMode{
+        background-color: #5a5a5a5f;
+        padding: 5px;
+        border-radius: 50px;
+    }
+    #LightThem:hover, #DarkThem:hover{
+        cursor: pointer;
+        transform: scale(1.025);
+    }
+    #LightThem:active, #DarkThem:active{
+        color: #939393;
+    }
+
+    /* Side Bar */
+    .sidebar {
+        width: 200px;
+        background-color: var(--SidebarBackgroundColor--);
+        height: 100vh;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        box-shadow: 2px 0 5px var(--SidebarShadowColor--);
+        transition: width 0.3s ease;
+        border-top-right-radius: 5px;
+    }
+    #showMoreCategory{
+        margin-left: 25px;
+        text-align: left;
+        margin-top: 15px;
+        color: var(--SidebarOptionsColor--);
+    }
+    #showMoreCategory:hover{
+        transform: scale(1.025);
+        cursor: pointer;
+    }
+    .sidebar a {
+        display: block;
+        color: var(--SidebarOptionsColor--);
+        text-decoration: none;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    .sidebar a:hover {
+        background-color: var(--SidebarOptionsHoverBackgroundColor--);
+    }
+    .sidebar.collapsed {
+        width: 60px;
+    }
+    .collapsed-content {
+        display: none;
+    }
+    .sidebar.collapsed .expanded-content {
+        display: none;
+    }
+    .sidebar.collapsed .collapsed-content {
+        display: block;
+        text-align: center;
+    }
+    .sideBarCategories{
+        width: 150px;
+        color: var(--SidebarCategoriesColor--);
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .cSideBarCategories{
+        width: 30px;
+        color: var(--SidebarCategoriesColor--);
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    /* content */
+    .content {
+        margin-left: 220px;
+        padding: 20px;
+        flex: 1;
+    }
+    body{
+        text-align: center;
+    }
+    h1{
+        margin-top: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: var(--h1Color--);
+    }
+    button {
+        width: 50px;
+        height: 40px;
+        background-color: var(--ButtonBackgroundColor--); 
+        color: var(--ButtonColor--);
+        border: none;
+        border-radius: 15px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: var(--ButtonHoverColor--);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    button:active{
+        background-color: var(--ButtonActiveColor--);
+    }
+
+    input {
+        width: 500px;
+        height: 20px;
+        background-color: var(--InputBackgroundColor--);
+        border-radius: 15px;
+        border: none;
+        padding: 10px;
+        color: var(--InputColor--);
+    }
+    input::placeholder {
+        color: var(--InputPlaceholderColor--);
+    }
+
+    input:hover{
+        transform: scale(1.05);
+    }
+    
+    #about{
+        color: var(--AboutColor--);
+        font-family: sans-serif;
+    }
+    .agamge{
+        margin-top: 115px;
+        background-color: var(--GameContainerBackgroundColor--);
+        height: 250px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px var(--GameContainerShadowColor--);
+    }
+    .agamge:hover{
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    .row {
+        gap: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        margin-top: 10px
+    }
+    .img-name{
+        font-weight: bold;
+        margin-top: 20px;
+        font-size: 25px;
+        font-family: arial;
+        color: var(--GameNameColor--);
+    }
+    .img-game{
+        border-radius: 12px;
+        box-shadow: 0 10px 20px 1px var(--GameContainerShadowColor--);
+    }
+    
+}

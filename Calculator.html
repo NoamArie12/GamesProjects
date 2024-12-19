@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images\Website-Icon.png">
+        <link rel="stylesheet" href="Calculator.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GamesProjects</title>
+    </head>
+    <body>
+
+        <div class="top-bar">
+            <div onclick="mainHTML()" class="logo">GamesProjects</div>
+            <nav class="menu">
+                <a id='startOfTheUpBar' href="index.html">Home</a>
+                <a onclick="navigateToPage()">Go Back</a>
+                <a onclick="reload()">Reset</a>
+            </nav>
+        </div>
+
+        <div id="calculator">
+            <input type="text" id="result" disabled/>
+            <div id='buttons'>
+                <button class="numButtons" id="Clear" onclick="clearResult()">C</button>
+                <button class="numButtons" id="Braket" onclick="braketButton()">()</button>
+                <button class="numButtons" onclick="buttonPressed('^')">^</button>
+                <button class="numButtons" onclick="buttonPressed('÷')">÷</button><br>
+                <p></p>
+                <button class="numButtons" onclick="buttonPressed('1')">1</button>
+                <button class="numButtons" onclick="buttonPressed('2')">2</button>
+                <button class="numButtons" onclick="buttonPressed('3')">3</button>
+                <button class="numButtons" onclick="buttonPressed('×')">×</button><br>
+                <p></p>
+                <button class="numButtons" onclick="buttonPressed('4')">4</button>
+                <button class="numButtons" onclick="buttonPressed('5')">5</button>
+                <button class="numButtons" onclick="buttonPressed('6')">6</button>
+                <button class="numButtons" onclick="buttonPressed('-')">-</button><br>
+                <p></p>
+                <button class="numButtons" onclick="buttonPressed('7')">7</button>
+                <button class="numButtons" onclick="buttonPressed('8')">8</button>
+                <button class="numButtons" onclick="buttonPressed('9')">9</button>
+                <button class="numButtons" onclick="buttonPressed('+')">+</button><br>
+                <p></p>
+                <button class="numButtons" onclick="deleteLastNum()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="numButtons" onclick="buttonPressed('0')">0</button>
+                <button class="numButtons" onclick="buttonPressed('.')">.</button>
+                <button class="numButtons" id="Equol" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+    </body>
+    <script src="Calculator.js"></script>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images\Website-Icon.png">
+        <link rel="stylesheet" href="XvsO.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>XvsO</title>
+    </head>
+    <body>
+
+        <div class="top-bar">
+        <div onclick="mainHTML()" class="logo">GamesProjects</div>
+        <nav class="menu">
+            <a id='startOfTheUpBar' href="index.html">Home</a>
+            <a onclick="navigateToPage()">Go Back</a>
+            <a onclick="reload()">Reset</a>
+        </nav>
+    </div>
+        <div class="content" id="content">
+            <h1>X vs O</h1>
+
+            <div id='column'>
+                <div class='row'>
+                <div onclick='first()' class='box'><p id='one' ></p></div>
+                <div onclick='second()' class='box'><p id='two' ></p></div>
+                <div onclick='third()' class='box'><p id='three' ></p></div>
+                </div>
+
+                <div class='row'>
+                <div onclick='fourth()' class='box'><p id='four' ></p></div>
+                <div onclick='fifth()' class='box'><p id='five' ></p></div>
+                <div onclick='sixth()' class='box'><p id='six' ></p></div>
+                </div>
+
+                <div class='row'>
+                    <div onclick='seventh()' class='box'><p id='seven' ></p></div>
+                    <div onclick='eighth()' class='box'><p id='eight' ></p></div>
+                    <div onclick='ninth()' class='box'><p id='nine' ></p></div>
+                </div>
+
+            </div>
+
+            <p id="move" >X move</p>
+        </div>
+    </body>
+    <script src="XvsO.js"></script>
+</html>

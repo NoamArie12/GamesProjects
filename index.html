@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images\Website-Icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GamesProjects</title>
+    </head>
+    <body>
+        <div class="top-bar">
+            <div onclick="mainHTML()" class="logo">GamesProjects</div>
+                <nav class="menu">
+                    <a id='startOfTheUpBar' href="index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div id="ChangeThemMode">
+                    <i onclick="toggleTheme('light')" id='LightThem' class="fa-solid fa-sun" style="color: rgb(255, 255, 255);"></i>
+                    <label> / </label>
+                    <i onclick="toggleTheme('dark')"id='DarkThem' class="fa-solid fa-moon" style="color: rgb(132, 132, 132);"></i>
+                </div>
+                
+        </div>
+
+            <div class="sidebar" id="sidebar">
+                <div id="showMoreCategory">
+                    <i class="fa-solid fa-bars" style="font-size: 20px;"></i>
+                </div>
+
+                <div class="expanded-content" id="expandedContent">
+                    <nav>
+                        <p class="sideBarCategories" >Games categories</p>
+                        <div><a href="#dashboard">DashBoard</a></div>
+                        <div><a href="#profile">Profile</a></div>
+                        <p class="sideBarCategories">Other Options</p>
+                        <div><a href="#settings">Settings</a></div>
+                        <div><a href="#logout">Logout</a></div>
+                    </nav>
+                </div>
+
+                <div class="collapsed-content" id="collapsedContent">
+                    <nav>
+                        <p class="cSideBarCategories">G C</p>
+                        <div><a href="#dashboard">D</a></div>
+                        <div><a href="#profile">P</a></div>
+                        <p class="cSideBarCategories">O O</p>
+                        <div><a href="#settings">S</a></div>
+                        <div><a href="#logout">L</a></div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content" id="content">
+
+                <h1>Hello what you wan't to play?</h1>
+                
+                <input id='inputText' placeholder="Enter your name">
+                <button onclick='redirect()' >send</button><br><br>
+
+                <a id='about' href="About.html">To the About page</a><br>
+
+                <div class="row">
+                    <div onclick='xvsoclick()' id='xvso' class="agamge">
+                        <br>
+                        <img class='img-game' src="images\XvsO-IconImage.png">
+                        <p class='img-name' >X vs O</p>
+                    </div>
+
+                    <div onclick='calculatorclick()' id='calculator' class="agamge">
+                        <br>
+                        <img class='img-game' src="images/Calculator-IconImage.png">
+                        <p class='img-name' >Calculator</p>
+                    </div>
+
+                    <div onclick='flipcoinclick()' id='flipcoin' class="agamge">
+                        <br>
+                        <img class='img-game' src="images\FlipACoin-IconImage.png">
+                        <p class='img-name' >Flip A Coin</p>
+                    </div>
+                </div>
+
+                <div id="space"></div>
+            </div>
+
+    </body>
+    <script src="script.js"></script>
+</html>

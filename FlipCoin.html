@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images\Website-Icon.png">
+        <link rel="stylesheet" href="FlipCoin.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FlipCoin</title>
+    </head>
+    <body>
+        <div id="backround"></div>
+        <div class="top-bar">
+            <div onclick="mainHTML()" class="logo">GamesProjects</div>
+            <nav class="menu">
+                <a id='startOfTheUpBar' href="index.html">Home</a>
+                <a onclick="navigateToPage()">Go Back</a>
+                <a onclick="reload()">Reset</a>
+                <a id="coinchange">Coin Change</a>
+                <a id="changeTime">Time Change</a>
+            </nav>
+        </div>
+        
+        <div id='moreOptions'>
+            <div class="row">
+                <p class="moreOptionsCoin" href="#">Euro - €</p>
+                <div class="coinNumDiv">
+                    <a class="coinNum" onclick="CCU1()">0.10€</a>
+                    <a class="coinNum" onclick="CCU2()">1€</a>
+                    <a class="coinNum" onclick="CCU3()">2€</a>
+                </div>
+            </div>
+            <div class="row">
+                <p class="moreOptionsCoin" href="#">Pound - £</p>
+                <div class="coinNumDiv">
+                    <a class="coinNum" onclick="CCP1()">0.10£</a>
+                    <a class="coinNum" onclick="CCP2()">1£</a>
+                    <a class="coinNum" onclick="CCP3()">2£</a>
+                </div>
+            </div>
+            <div class="row">
+                <p class="moreOptionsCoin" href="#">INS - ₪</p><br>
+                <div class="coinNumDiv">
+                    <a class="coinNum" onclick="CCI1()">0.10₪</a>
+                    <a class="coinNum" onclick="CCI2()">1₪</a>
+                    <a class="coinNum" onclick="CCI3()">10₪</a>
+                </div>
+            </div>
+            
+        </div>
+        <div id='moreOptionsTime'>
+                <p class="moreOptionsCoin" href="#">Euro - €</p>
+                <div class="coinNumDiv">
+                    <a class="coinNum" onclick="">3 seconds</a>
+                    <a class="coinNum" onclick="">10 seconds</a>
+                    <a class="coinNum" onclick="">half a minute</a>
+                </div>
+        </div>
+        
+        <div class="content" id="content">
+                <h1>Flip A Coin</h1>
+
+                <div id="coin">
+                    <img id='coinImg' src="images\QuestionCoin.png"><br>
+                    <button onclick='flip()' id='Flip' >Flip The Coin</button>
+                </div>
+        </div>
+
+    </body>
+    <script src="FlipCoin.js" ></script>
+</html>

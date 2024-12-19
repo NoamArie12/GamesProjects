@@ -1,0 +1,120 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Top Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.top-bar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+.top-bar .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+}
+.top-bar .menu a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main-container {
+    display: flex;
+    margin-top: 60px; /* Push below the top bar */
+}
+.logo:hover{
+    cursor: pointer;
+}
+#startOfTheUpBar{
+    margin-left: 125px;
+}
+
+/* Side Bar */
+.sidebar {
+    width: 200px;
+    background-color: #e4e4e4;
+    height: 100vh; /* Full height */
+    position: fixed;
+    top: 60px; /* Below the top bar */
+    left: 0;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    border-top-right-radius: 5px;
+}
+#showMoreCategory{
+    margin-left: 25px;
+    text-align: left;
+    margin-top: 15px;
+}
+#showMoreCategory:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.sidebar a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.sidebar a:hover {
+    background-color: #ddd;
+}
+.sidebar.collapsed {
+    width: 60px;
+}
+.collapsed-content {
+    display: none;
+}
+.sidebar.collapsed .expanded-content {
+    display: none;
+}
+.sidebar.collapsed .collapsed-content {
+    display: block;
+    text-align: center;
+}
+.sideBarCategories{
+    width: 150px;
+    color: #8f8f8f;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.cSideBarCategories{
+    width: 30px;
+    color: #8f8f8f;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#EndOfTheUpBar{
+    margin-right: 750px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+/* content */
+.content {
+    padding: 20px;
+    flex: 1;
+    margin-top: 50px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
