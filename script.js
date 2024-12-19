@@ -71,7 +71,7 @@ function toggleTheme() {
     }
 // The Calculator function
     function calculatorclick(){
-        window.location.href = 'calculator.html';
+        window.location.href = 'Calculator.html';
     }
 
 // The Flip A Coin function
