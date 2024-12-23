@@ -3,6 +3,7 @@
     <head>
         <link rel="icon" href="images\Website-Icon.png">
         <link rel="stylesheet" href="FlipCoin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FlipCoin</title>
@@ -18,6 +19,11 @@
                 <a id="coinchange">Coin Change</a>
                 <a id="changeTime">Time Change</a>
             </nav>
+            <div id="ChangeThemMode">
+                <i onclick="toggleTheme('light')" id='LightThem' class="fa-solid fa-sun" style="color: rgb(255, 255, 255);"></i>
+                <label> / </label>
+                <i onclick="toggleTheme('dark')"id='DarkThem' class="fa-solid fa-moon" style="color: rgb(132, 132, 132);"></i>
+            </div>
         </div>
         
         <div id='moreOptions'>

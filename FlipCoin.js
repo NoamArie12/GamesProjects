@@ -1,5 +1,5 @@
 // The navigate to the main page function
-    function navigateToPage() {
+function navigateToPage() {
     window.location.href = "index.html";
 }
 // The reload function

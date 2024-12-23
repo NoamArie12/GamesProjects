@@ -12,7 +12,25 @@ function navigateToPage() {
         window.location.href = 'index.html';
     }
 
-////////////////////////////////////// The game  //////////////////////////////////////////////////
+// ! -------------------- Toggle theme -------------------- ! \\
+
+// On page load, set the theme and icon colors based on localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme') || 'LightTheme';
+    document.body.classList.toggle('DarkTheme', theme === 'DarkTheme');
+    document.getElementById('LightThem').style.color = theme === 'DarkTheme' ? 'rgb(132, 132, 132)' : 'rgb(255, 255, 255)';
+    document.getElementById('DarkThem').style.color = theme === 'DarkTheme' ? 'rgb(255, 255, 255)' : 'rgb(132, 132, 132)';
+});
+
+// Toggle the theme and save the settings
+function toggleTheme() {
+    const newTheme = document.body.classList.toggle('DarkTheme') ? 'DarkTheme' : 'LightTheme';
+    localStorage.setItem('theme', newTheme);
+    document.getElementById('LightThem').style.color = newTheme === 'DarkTheme' ? 'rgb(132, 132, 132)' : 'rgb(255, 255, 255)';
+    document.getElementById('DarkThem').style.color = newTheme === 'DarkTheme' ? 'rgb(255, 255, 255)' : 'rgb(132, 132, 132)';
+}
+
+// ! -------------------- The game -------------------- ! \\
 
 
 let winning = 'False';

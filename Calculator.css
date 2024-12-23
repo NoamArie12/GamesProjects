@@ -1,9 +1,73 @@
-body{
-    display: grid;
-    place-items: center;
+:root{
+    /*Body*/
+    --BodyBackgroundColor--: #f4f4f9;
+
+    /*Calculator*/
+    --CalculatorBackgroundColor--: #d4d4d4;
+
+    /*Result*/
+    --ResultBackgroundColor--: #f0f0f0;
+    --ResultColor--: #303030;
+
+    /*Buttons*/
+    --ButtonsBackgroundColor--: #f0f0f0;
+
+    /*BumButtons*/
+    --NumButtonsBackgroundColor--: #e2e2e2;
+    --NumButtonsColor--: #3d3d3d;
+    --NumButtonsHoverColor--: #d6d6d6;
+    --NumButtonsActiveColor--: #b6b6b6;
+
+    /*Clear*/
+    --ClearColor--: #c70202;
+
+    /*Eqoul*/
+    --EqoulBackgroundColor--: #909090;
+    --EqoulColor--: #fafafa;
+    --EqoulHoverBackgroundColor--: #a0a0a0;
+    --EqoulActiveBackgroundColor--: #747474;
+}
+
+.DarkTheme{
+    /*Body*/
+    --BodyBackgroundColor--: #121212;
+
+    /*Calculator*/
+    --CalculatorBackgroundColor--: #1e1e1e;
+
+    /*Result*/
+    --ResultBackgroundColor--: #191919;
+    --ResultColor--: #c6c6c6;
+
+    /*Buttons*/
+    --ButtonsBackgroundColor--: #191919;
+
+    /*BumButtons*/
+    --NumButtonsBackgroundColor--: #121212;
+    --NumButtonsColor--: #c3c3c3;
+    --NumButtonsHoverColor--: #242424;
+    --NumButtonsActiveColor--: #404040;
+
+    /*Clear*/
+    --ClearColor--: #c70202;
+
+    /*Eqoul*/
+    --EqoulBackgroundColor--: #5e5e5e;
+    --EqoulColor--: #fafafa;
+    --EqoulHoverBackgroundColor--: #4c4c4c;
+    --EqoulActiveBackgroundColor--: #7e7e7e;
+}
+
+body,html{
     margin: 0;
     padding: 0;
+    display: grid;
+    place-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--BodyBackgroundColor--);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Top Bar */
@@ -45,54 +109,79 @@ body{
 #startOfTheUpBar{
     margin-left: 125px;
 }
-
+#ChangeThemMode{
+    background-color: #5a5a5a5f;
+    padding: 5px;
+    border-radius: 50px;
+}
+#LightThem:hover, #DarkThem:hover{
+    cursor: pointer;
+    transform: scale(1.025);
+}
+#LightThem:active, #DarkThem:active{
+    color: #939393;
+}
 
 /* content */
 #calculator{
-    margin-top: 100px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--CalculatorBackgroundColor--);
 }
 #result{
     text-align: center;
-    background-color: #f0f0f0;
-    color: black;
+    background-color: var(--ResultBackgroundColor--);
+    color: var(--ResultColor--);
     border: 0;
     border-radius: 10px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     height: 40px;
-    width: 280px;
+    width: 323px;
     font-size: 20px;
+}
+button:hover{
+    cursor: pointer;
 }
 #buttons{
     margin-top: 10px;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: var(--ButtonsBackgroundColor--);
     padding: 35px;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 .numButtons{
-    background-color: #e2e2e2;
+    background-color: var(--NumButtonsBackgroundColor--);
     border-radius: 50px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 0;
-    color: e2e2e2;
+    color: var(--NumButtonsColor--);
+    font-size: large;
+}
+.numButtons:hover{
+    background-color: var(--NumButtonsHoverColor--);
 }
 .numButtons:active{
-    background-color: gray;
+    background-color: var(--NumButtonsActiveColor--);
 }
 #Clear{
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(199, 2, 2);
+    color: var(--ClearColor--);
 }
 #Equol{
-    background-color: #909090;
-    color: #fafafa;
+    background-color: var(--EqoulBackgroundColor--);
+    color: var(--EqoulColor--);
     font-weight: bold;
     font-size: 13.5px;
+    font-size: large;
+}
+#Equol:hover{
+    background-color: var(--EqoulHoverBackgroundColor--);
 }
 #Equol:active{
-    background-color: #b7b7b7;
+    background-color: var(--EqoulActiveBackgroundColor--);
 }

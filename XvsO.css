@@ -1,7 +1,56 @@
+:root{
+    /*Body*/
+    --BodyBackgroundColor--: #f4f4f9;
+    --BodyColor--: #333;
+
+    /*h1*/
+    --h1Color--: #333;
+
+    /*Box*/
+    --BoxBackgroundColor--: #ffffff;
+    --BoxBorderColor--: #ddd;
+    --BoxShadowColor--: rgba(0, 0, 0, 0.1);
+    --BoxHoverBackgroundColor--: #f0f0f0;
+
+    /*P*/
+    --PColor--: #333;
+
+    /*Move*/
+    --MoveColor--: #555;
+    --MoveHoverColor--: #333;
+
+}
+.DarkTheme{
+    /*Body*/
+    --BodyBackgroundColor--: #121212;
+    --BodyColor--: #f5f5f5;
+
+    /*h1*/
+    --h1Color--: #f5f5f5;
+
+    /*Box*/
+    --BoxBackgroundColor--: #1e1e1e;
+    --BoxBorderColor--: #4a4a4a;
+    --BoxShadowColor--: #00000080;
+    --BoxHoverBackgroundColor--: #3a3a3a;
+
+    /*P*/
+    --PColor--: #cccccc;
+
+    /*Move*/
+    --MoveColor--: #cccccc;
+    --MoveHoverColor--: #f5f5f5;
+
+}
+
 body,html{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--BodyBackgroundColor--);
+    color: var(--BodyColor--);
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Top Bar */
@@ -42,14 +91,17 @@ body,html{
 #startOfTheUpBar{
     margin-left: 125px;
 }
-
-/* Content */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+#ChangeThemMode{
+        background-color: #5a5a5a5f;
+        padding: 5px;
+        border-radius: 50px;
+}
+#LightThem:hover, #DarkThem:hover{
+        cursor: pointer;
+        transform: scale(1.025);
+}
+#LightThem:active, #DarkThem:active{
+        color: #939393;
 }
 
 /* Content */
@@ -64,7 +116,7 @@ h1 {
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 2.5rem;
-    color: #333;
+    color: var(--h1Color--);
     margin-bottom: 20px;
 }
 #column {
@@ -83,33 +135,34 @@ h1 {
     cursor: pointer;
     height: 70px;
     width: 70px;
-    background-color: #ffffff;
-    border: 2px solid #ddd;
+    background-color: var(--BoxBackgroundColor--);
+    border: 2px solid var(--BoxBorderColor--);
     border-radius: 12.5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--BoxShadowColor--);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .box:hover {
-    background-color: #f0f0f0;
+    background-color: var(--BoxHoverBackgroundColor--);
     transform: scale(1.05);
 }
 p {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: var(--PColor--);
     margin: 0;
 }
 #move {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
-    color: #555;
+    color: var(--MoveColor--);
     margin-top: 20px;
     text-align: center;
     transition: color 0.3s ease;
 }
 #move:hover {
-    color: #333;
+    color: var(--MoveHoverColor--);
+    font-size: 1.5rem;
 }
