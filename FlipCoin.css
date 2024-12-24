@@ -12,6 +12,10 @@
     --FlipBorderColor--: #4a4a4a;
     --FlipHoverBackgroundColor--: #4d4d4d;
     --FlipActiveBackgroundColor--: #3b3b3b;
+
+    /*FlipACoinDiv*/
+    --FlipACoinDivBackgroundColor--: #0000000c;
+    --FlipACoinDivBorderColor--: #ddd;
 }
 .DarkTheme{
     /*Body*/
@@ -27,6 +31,10 @@
     --FlipBorderColor--: #4a4a4a;
     --FlipHoverBackgroundColor--: #171717;
     --FlipActiveBackgroundColor--: #383838;
+
+    /*FlipACoinDiv*/
+    --FlipACoinDivBackgroundColor--: #1e1e1e;
+    --FlipACoinDivBorderColor--: #4a4a4a;
 }
 
 body,html{
@@ -160,6 +168,17 @@ body,html{
 /* Content */
 .content {
     margin-top: 50px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+#FlipACoinDiv {
+    background-color: var(--FlipACoinDivBackgroundColor--);
+    width: 275px;
+    border: 1px solid var(--FlipACoinDivBorderColor--);
+    border-radius: 15px;
+    padding: 50px;
+    padding-top: 10px;
 }
 h1{
     text-align: center;

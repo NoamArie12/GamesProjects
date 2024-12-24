@@ -1,61 +1,61 @@
-:root{
-    /*Body*/
+:root {
+    /* Body */
     --BodyBackgroundColor--: #f4f4f9;
 
-    /*Calculator*/
-    --CalculatorBackgroundColor--: #d4d4d4;
+    /* Calculator */
+    --CalculatorBackgroundColor--: #e6e6e6;
 
-    /*Result*/
-    --ResultBackgroundColor--: #f0f0f0;
-    --ResultColor--: #303030;
+    /* Result */
+    --ResultBackgroundColor--: #ffffff;
+    --ResultColor--: #333333;
 
-    /*Buttons*/
-    --ButtonsBackgroundColor--: #f0f0f0;
+    /* Buttons */
+    --ButtonsBackgroundColor--: #e6e6e6;
 
-    /*BumButtons*/
-    --NumButtonsBackgroundColor--: #e2e2e2;
-    --NumButtonsColor--: #3d3d3d;
-    --NumButtonsHoverColor--: #d6d6d6;
-    --NumButtonsActiveColor--: #b6b6b6;
+    /* NumButtons */
+    --NumButtonsBackgroundColor--: #dcdcdc;
+    --NumButtonsColor--: #333333;
+    --NumButtonsHoverColor--: #c8c8c8;
+    --NumButtonsActiveColor--: #b0b0b0;
 
-    /*Clear*/
-    --ClearColor--: #c70202;
+    /* Clear */
+    --ClearColor--: #cc3333;
 
-    /*Eqoul*/
-    --EqoulBackgroundColor--: #909090;
-    --EqoulColor--: #fafafa;
-    --EqoulHoverBackgroundColor--: #a0a0a0;
-    --EqoulActiveBackgroundColor--: #747474;
+    /* Equal */
+    --EqoulBackgroundColor--: #8c8c8c;
+    --EqoulColor--: #ffffff;
+    --EqoulHoverBackgroundColor--: #a6a6a6;
+    --EqoulActiveBackgroundColor--: #6e6e6e;
 }
 
-.DarkTheme{
-    /*Body*/
+.DarkTheme {
+    /* Body */
     --BodyBackgroundColor--: #121212;
 
-    /*Calculator*/
+    /* Calculator */
     --CalculatorBackgroundColor--: #1e1e1e;
 
-    /*Result*/
+    /* Result */
     --ResultBackgroundColor--: #191919;
-    --ResultColor--: #c6c6c6;
+    --ResultColor--: #f5f5f5;
 
-    /*Buttons*/
+    /* Buttons */
     --ButtonsBackgroundColor--: #191919;
 
-    /*BumButtons*/
-    --NumButtonsBackgroundColor--: #121212;
-    --NumButtonsColor--: #c3c3c3;
-    --NumButtonsHoverColor--: #242424;
-    --NumButtonsActiveColor--: #404040;
+    /* NumButtons */
+    --NumButtonsBackgroundColor--: #242424;
+    --NumButtonsColor--: #e6e6e6;
+    --NumButtonsHoverColor--: #3a3a3a;
+    --NumButtonsActiveColor--: #525252;
 
-    /*Clear*/
-    --ClearColor--: #c70202;
+    /* Clear */
+    --ClearColor--: #cc3333;
 
-    /*Eqoul*/
-    --EqoulBackgroundColor--: #5e5e5e;
-    --EqoulColor--: #fafafa;
-    --EqoulHoverBackgroundColor--: #4c4c4c;
-    --EqoulActiveBackgroundColor--: #7e7e7e;
+    /* Equal */
+    --EqoulBackgroundColor--: #4d4d4d;
+    --EqoulColor--: #ffffff;
+    --EqoulHoverBackgroundColor--: #5e5e5e;
+    --EqoulActiveBackgroundColor--: #3a3a3a;
 }
 
 body,html{
