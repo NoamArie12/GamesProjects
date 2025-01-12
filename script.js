@@ -1,20 +1,68 @@
-//The redirect function that redirect the user to a game from the input
+// The redirect function that redirect the user to a game from the input
 function redirect() {
     let inputText = document.getElementById('inputText').value;
     inputText = inputText.toLowerCase();
     if (inputText === 'x vs o') {
         window.location.href = 'XvsO.html';
-    } else {
-        console.log('Hello');
-    }
-    if (inputText === 'flip a coin') {
+
+    }else if (inputText === 'flip a coin') {
         window.location.href = 'FlipCoin.html';
-    } else {
+
+    }else if (inputText === 'calculator') {
+        window.location.href = 'Calculator.html';
+
+    }else if ((inputText === 'guess number') && (inputText === 'number guess')) {
+        window.location.href = 'NumberGuessing.html';
+    }
+    else {
         console.log('Hello');
     }
 }
+document.getElementById('inputText').addEventListener('input', function(e) {
+    const value = e.target.value.toLowerCase().trim();
+    const NotFindGame = document.getElementById('NotFindGame');
 
-//The redirect key that do when you click the enter key
+    // Importing the games widgets
+    const games = {
+        'xvso': { element: document.getElementById('xvso'), name: 'x vs o' },
+        'calculator': { element: document.getElementById('calculator'), name: 'calculator' },
+        'flipcoin': { element: document.getElementById('flipcoin'), name: 'flip a coin' }
+    };
+
+    let foundMatch = false;
+
+    // Iterate through each game to check if the value matches
+    for (let key in games) {
+        const game = games[key];
+        if (game.name.toLowerCase().includes(value)) {
+            // Show the matching game and hide others
+            game.element.style.display = 'block';
+            foundMatch = true;
+        } else {
+            game.element.style.display = 'none';
+        }
+    }
+
+    // Handle "Not Find Game" message
+    if (foundMatch) {
+        NotFindGame.style.display = 'none';
+    } else {
+        NotFindGame.style.display = value === '' ? 'none' : 'block';
+    }
+
+    // If the input is empty, show all games
+    if (value === '') {
+        Object.values(games).forEach(game => {
+            game.element.style.display = 'block';
+        });
+        NotFindGame.style.display = 'none';
+    }
+
+    console.log(value);
+});
+
+
+// The redirect key that do when you click the enter key
 document.getElementById('inputText').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         redirect();
@@ -77,4 +125,8 @@ function toggleTheme() {
 // The Flip A Coin function
     function flipcoinclick(){
         window.location.href = 'FlipCoin.html';
+    }
+// The Number Guessing function
+    function numberguessclick(){
+        window.location.href = 'NumberGuessing.html';
     }

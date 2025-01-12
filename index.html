@@ -56,28 +56,35 @@
 
                 <h1>Hello what you wan't to play?</h1>
                 
-                <input id='inputText' placeholder="Enter your name">
-                <button onclick='redirect()' >send</button><br><br>
+                <input id='inputText' placeholder="Enter the name of the game">
+                <button onclick='redirect()' >Enter</button><br><br>
 
                 <a id='about' href="About.html">To the About page</a><br>
+                <div id="Games">
+                    <h1 id="NotFindGame">Not Find Game</h1>
+                    <div class="row">
+                        <div onclick='xvsoclick()' id='xvso' class="agamge">
+                            <img class='img-game' src="images\XvsO-IconImage.png">
+                            <p class='img-name' >X vs O</p>
+                        </div>
 
-                <div class="row">
-                    <div onclick='xvsoclick()' id='xvso' class="agamge">
-                        <br>
-                        <img class='img-game' src="images\XvsO-IconImage.png">
-                        <p class='img-name' >X vs O</p>
+                        <div onclick='calculatorclick()' id='calculator' class="agamge">
+                            <img class='img-game' src="images/Calculator-IconImage.png">
+                            <p class='img-name' >Calculator</p>
+                        </div>
+
+                        <div onclick='flipcoinclick()' id='flipcoin' class="agamge">
+                            <img class='img-game' src="images\FlipACoin-IconImage.png">
+                            <p class='img-name' >Flip A Coin</p>
+                        </div>
+                        <div onclick="numberguessclick()" id="guessingnumber" class="agamge">
+                            <img class='img-game' src="images/GuessingNumber-IconImage.png">
+                            <p class='img-name' >Guess Number</p>
+
+                        </div>
                     </div>
-
-                    <div onclick='calculatorclick()' id='calculator' class="agamge">
-                        <br>
-                        <img class='img-game' src="images/Calculator-IconImage.png">
-                        <p class='img-name' >Calculator</p>
-                    </div>
-
-                    <div onclick='flipcoinclick()' id='flipcoin' class="agamge">
-                        <br>
-                        <img class='img-game' src="images\FlipACoin-IconImage.png">
-                        <p class='img-name' >Flip A Coin</p>
+                    <div class="row">
+                        
                     </div>
                 </div>
 

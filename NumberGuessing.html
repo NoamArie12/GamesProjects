@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images\Website-Icon.png">
+        <link rel="stylesheet" href="NumberGuessing.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GamesPtojects</title>
+    </head>
+    <body>
+        <div class="top-bar">
+            <div onclick="mainHTML()" class="logo">GamesProjects</div>
+                <nav class="menu">
+                    <a id='startOfTheUpBar' href="index.html">Home</a>
+                    <a onclick="navigateToPage()">Go Back</a>
+                    <a onclick="reload()">Reset</a>
+                </nav>
+            <div id="ChangeThemMode">
+                <i onclick="toggleTheme('light')" id='LightThem' class="fa-solid fa-sun" style="color: rgb(255, 255, 255);"></i>
+                <label> / </label>
+                <i onclick="toggleTheme('dark')"id='DarkThem' class="fa-solid fa-moon" style="color: rgb(132, 132, 132);"></i>
+            </div>
+        </div>
+        <div id="content">
+
+            <canvas id="canvas"></canvas>
+            
+            <div id="TheGame">
+                <h1 id="Title">Number Guessing Game</h1>
+                <p id="SubTitle">Guess A number between:</p>
+                <p id="ChosenTargetParagraph">From: <input id="MinNumber" type="number" value="1"> To: <input id="MaxNumber" type="number" value="100">
+                    <label id="NewTarget">  |  <button id="NewTargetButton" onclick="getVariables()">New Target</button></label>
+                </p>
+                <p id="Clue">Enter a number in the input field:</p>
+                <div id="GuessDiv">
+                    <input id="GuessField" type="number">
+                    <button id="GuessButton" onclick="GuessFunc()">Guess</button>
+                </div>
+                <button id="ReloadButton" style="display: none;" onclick="reload()">Reload</button>
+                <p id="TryCount" style="display: none;"></p>
+                <p id="TheChosenNumber" style="display: none;"></p>
+            </div>
+        </div>
+
+    </body>
+    <script src="NumberGuessing.js"></script>
+</html>

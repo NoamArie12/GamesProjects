@@ -1,0 +1,200 @@
+/* Main styles*/
+:root{
+    /* Body */
+    --BodyBackgroundColor--: #f4f4f9;
+
+    /* H1 P Label */
+    --H1PLableColor--: #000000;
+
+    /* Button */
+    --ButtonBackgroundColor--: #ffffff;
+    --ButtonColor--: #000000;
+    --ButtonBorderColor--: #ddd;
+    --ButtonHoverBackgroundColor--: #f3f3f3;
+    
+    /* Input */
+    --InputBackgroundColor--: #ffffff;
+    --InputColor--:#333 ;
+    --InputBorderColor--: #ddd;
+
+    /* The Game */
+    --TheGameBackgroundColor--: #0000000c;
+    --TheGameBorderColor--: #ddd;
+
+    /* The Chosen Number */
+    --TheChosenNumberBackgroundNumber--: #d6d6d6;
+
+}
+.DarkTheme{
+    /* Body */
+    --BodyBackgroundColor--: #121212;
+
+    /* H1 P Label */
+    --H1PLableColor--: #f5f5f5;
+
+    /* Button */
+    --ButtonBackgroundColor--: #1e1e1e;
+    --ButtonColor--: #ffffff;
+    --ButtonBorderColor--: #4a4a4a;
+    --ButtonHoverBackgroundColor--: #171717;
+    
+    /* Input */
+    --InputBackgroundColor--: #1e1e1e;
+    --InputColor--:#f4f4f9 ;
+    --InputBorderColor--: #4a4a4a;
+
+    /* The Game */
+    --TheGameBackgroundColor--: #1e1e1e;
+    --TheGameBorderColor--: #4a4a4a;
+
+    /* The Chosen Number */
+    --TheChosenNumberBackgroundNumber--: #3a3a3a;
+
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--BodyBackgroundColor--);
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Confetti */
+canvas {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.top-bar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.top-bar .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+}
+.top-bar .menu a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main-container {
+    display: flex;
+    margin-top: 60px; /* Push below the top bar */
+}
+.logo:hover{
+    cursor: pointer;
+}
+#startOfTheUpBar{
+    margin-left: 125px;
+}
+#ChangeThemMode{
+    background-color: #5a5a5a5f;
+    padding: 5px;
+    border-radius: 50px;
+}
+#LightThem:hover, #DarkThem:hover{
+    cursor: pointer;
+    transform: scale(1.025);
+}
+#LightThem:active, #DarkThem:active{
+    color: #939393;
+}
+
+/* Content */
+#content {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1,p,label {
+    color: var(--H1PLableColor--);
+}
+button{
+    background-color: var(--ButtonBackgroundColor--);
+    color: var(--ButtonColor--);
+    border: 1px solid var(--ButtonBorderColor--);
+    padding: 7.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.01);
+    background-color: var(--ButtonHoverBackgroundColor--);
+}
+input{
+    background-color: var(--InputBackgroundColor--);
+    border: 1px solid var(--InputBorderColor--);
+    color: var(--InputColor--);
+    padding: 7.5px 12.5px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+input:hover{
+    transform: scale(1.01);
+}
+#TheGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: var(--TheGameBackgroundColor--);
+    border: 1px solid var(--TheGameBorderColor--);
+    border-radius: 15px;
+    padding: 40px 50px 40px 50px;
+}
+#Title{
+    margin-top: 0;
+}
+#SubTitle{
+    margin-bottom: 10px;
+}
+#ChosenTargetParagraph{
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+#ReloadButton{
+    padding: 7.5px 25px 7.5px 25px;
+    font-size: 15px;
+    margin: 15px;
+}
+#TryCount{
+    margin: 15px;
+    margin-bottom: 30px;
+}
+#TheChosenNumber{
+    background-color: var(--TheChosenNumberBackgroundNumber--);
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0;
+}
